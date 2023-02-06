@@ -20,13 +20,6 @@ body {
     background-color: var(--baby-blue);
 }
 
-header {
-}
-
-ul {
-    
-}
-
 li {
     display: inline;
     margin: 10px;
@@ -35,7 +28,7 @@ li {
 .info {
     display: flex;
     flex-flow: row wrap;
-    height: 50px;
+    height: 60px;
     background-color: var(--mulberry);
     color: var(--baby-blue);
 }
@@ -45,6 +38,8 @@ li {
     flex: 1;
     justify-content: end;
     align-items: center;
+    gap: 5px;
+    margin-right: 10px;
 }
 
 .self-portrait {
@@ -56,7 +51,6 @@ li {
 
 .block {
     display: flex;
-    height: 100px;
     gap: 20px;
     color: var(--darker-grey);
 }
@@ -65,8 +59,9 @@ li {
     display: flex;
     flex: 1;
     justify-content: right;
-    align-items: center;
+    align-items: top;
     padding: 10px;
+    width: 20%;
     border-right: 5px solid var(--darker-grey);
 }
 
@@ -76,11 +71,26 @@ li {
 
 .story {
     flex: 10;
+    width: 80%;
 }
 
 .projects {
-    display: flex;
+    display: block;
     flex: 10;
+    width: 80%;
+}
+
+.prework {
+    display: flex;
+}
+
+.semantics {
+    display: flex;
+}
+
+.pro-img {
+    display: flex;
+    margin: 10px;
 }
 
 .links {
@@ -88,6 +98,7 @@ li {
     flex: 10;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 .contact-me {
@@ -103,6 +114,7 @@ li {
     justify-content: left;
     align-items: center;
     font-size: 200%;
+    margin: 10px;
 }
 
 #portfolio {
@@ -111,6 +123,23 @@ li {
 
 #contact {
     margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+#prework-img {
+    width: 80%;
+    border: 3px solid var(--sea-green);
+}
+
+#semantics-img {
+    width: 80%;
+    border: 3px solid var(--sea-green);
+}
+
+#pro-sem {
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
 }
 
 @media screen and (max-width: 992px) {

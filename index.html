@@ -10,6 +10,7 @@
 
     <body>
         <header>
+            <!-- This is the top navigation bar that has my name as well as links to other sections of the page, and a download of my Resume -->
             <div class="info">
                 <h1 id="name">Andrew Jester</h1>
                 <ul class="personal">
@@ -22,34 +23,46 @@
         </header>
 
         <main>
+            <!-- This section contains my self portrait, and links to the folder it is contained in -->
             <section>
                 <div class="self-portrait">
-                    <h2>Insert Photo of me here</h1>
+                    <img id="port" src="./assets/images/image0.jpeg" alt="Self Portrait Photo">
                 </div>
             </section>
+            <!-- This section has the About Me section, which contains a short introduction about myself -->
             <section class="block">
                 <div class="headings">
-                    <a id="about-me"><h2 class="headings-text">About me</h2></a>
+                    <a id="about-me"><h2 class="headings-text">About Me</h2></a>
                 </div>
                 <div class="story">
                     <p>
-                        Input life story here, but short as well
+                        Hello! I am a aspiring software developer who has many passions and talents. I love technology
+                        and love learning about many different things. I have a ton of experience working with computers,
+                        as I have built many computers and used to work in a electronics retail store, and want to learn
+                        how to get better at the software side of computers, like coding.
+                        <br></br>
+                        I like to spend my free time playing video games, playing golf, playing instruments, and learning
+                        about different topics on YouTube. I used to play the Tuba in High School and I was
+                        apart of my High School marching band. I even went to college to play the Tuba, but that fell through
+                        after Covid, and so I switched to Computer Science.
                     </p>
                 </div>
             </section>
+            <!-- This section contains the coding projects that I have worked on, and is titled Work. They have images of those
+            projects and when the images are clicked on, will link directly to those deployed projects -->
             <section class="block" id="portfolio">
                 <div class="headings">
                     <a id="work"><h2 class="headings-text">Work</h2></a>
                 </div>
                 <div class="projects">
-                    <div class="prework">
+                    <div class="pro-container">
                         <a id="prework-img"  href="https://destroer47.github.io/prework-study-guide/" target="_blank">
                             <img class="pro-img" src="./assets/images/prework.PNG" alt="My Prework Study Guide">
                         </a>
                         <p id="pre-cap">Prework Study Guide</p>
                     </div>
-                    <div class="semantics">
-                        <a id="semantics-img" id="pro-sem" href="https://destroer47.github.io/01-Module-1-Challenge/" target="_blank">
+                    <div class="pro-container">
+                        <a id="semantics-img" href="https://destroer47.github.io/01-Module-1-Challenge/" target="_blank">
                             <img  class="pro-img" src="./assets/images/semantics.PNG" alt="HTML Semantics Challenge Website">
                         </a>
                        <p id="sem-cap">HTML Semantics</p> 
@@ -57,13 +70,15 @@
                 </div>
             </section>
         </main>
-
+        <!-- This section contains all the information on how to contact me. It contains my phone number. My email, and when you
+        click on it, it opens up a new email in your computers default email program that can be sent to me. My Github Profile,
+        LinkedIn profile, and Discord profile, and when clicked on, will take you to those respective sites -->
         <footer class="block" id="contact">
             <div class="headings">
                 <a id="contact-me"><h2 class="headings-text">Contact Me</h2></a>
             </div>
             <div class="links">
-                <a class="contact-me link-hover" href="#" target="_blank">(614) 357-9738</a>
+                <p class="contact-me link-hover">(614) 357-9738</p>
                 <a class="contact-me link-hover" href="mailto:andrewj5787@jesterz.net" target="_blank">andrewj5787@jesterz.net</a>
                 <a class="contact-me link-hover" href="https://github.com/Destroer47" target="_blank">GitHub</a>
                 <a class="contact-me link-hover" href="https://www.linkedin.com/in/andrew-jester-8726b7262/" target="_blank">LinkedIn</a>

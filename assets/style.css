@@ -1,38 +1,30 @@
+/* These are the main colors for the website */
 :root {
-    --light-grey: #DBD4D3;
-    --dark-grey: #757780;
     --tart-orange: #F0544F;
     --sea-green: #3BB273;
-    --dark-purple: #37123C;
-    --plum: #550527;
-    --blue-sapphire: #05668D;
-    --yellow: #FAA613;
-    --bright-orange: #F44708;
-    --red: #A10702;
-    --maya-blue: #73c2fb;
-    --sky-blue: #87ceeb;
-    --baby-blue: #89cff0;
-    --mulberry: #4c0121;
     --darker-grey: #242a2d;
 }
-
+/* Sets background color of body to orange, and sets font, family of the whole page */
 body {
-    background-color: var(--baby-blue);
+    background-color: var(--tart-orange);
+    font-family: Palatino, URW Palladio L, serif;
 }
-
+/* Sets list in header to inline, and makes text bold */
 li {
     display: inline;
     margin: 10px;
+    font-weight: bold;
 }
-
+/* Creates flex-box for header, in a row, sets background color of header to sea green, and sets text color to dark grey */
 .info {
     display: flex;
     flex-flow: row wrap;
-    height: 60px;
-    background-color: var(--mulberry);
-    color: var(--baby-blue);
+    height: 20%;
+    background-color: var(--sea-green);
+    color: var(--darker-grey);
 }
-
+/* Creates flex-box inside ul element, makes flex spacing even, content inside will be set to right of screen, and centered vertically,
+ and text is centered in the middle of each box */
 .personal {
     display: flex;
     flex: 1;
@@ -40,87 +32,88 @@ li {
     align-items: center;
     gap: 5px;
     margin-right: 10px;
+    text-align: center;
 }
-
+/* Creates flex-box, centers element horizontally and vertically */
 .self-portrait {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    width: 100%;
 }
-
+/* Container for main elements, creates flex-box, sets gap in-between boxes, and sets text color to dark grey */
 .block {
     display: flex;
     gap: 20px;
     color: var(--darker-grey);
 }
-
+/* Sets title for each element, puts title to the left of each section, adds right border, aligns text and to top and right */
 .headings {
     display: flex;
     flex: 1;
     justify-content: right;
     align-items: top;
     padding: 10px;
-    width: 20%;
+    min-width: 15%;
     border-right: 5px solid var(--darker-grey);
+    text-align: right;
 }
-
+/* Sets font size of section title's */
 .headings-text {
     font-size: 150%;
 }
-
+/* Sets width of content right of about me section */
 .story {
     flex: 10;
-    width: 80%;
+    min-width: 80%;
+    margin-right: 20px;
 }
-
+/* Sets width of content right of Work section, and content inside is displayed as block */
 .projects {
     display: block;
     flex: 10;
-    width: 80%;
+    min-width: 80%;
 }
-
-.prework {
+/* Container of each project element, creates flex-boxes, sets position to relative, and text is aligned to center */
+.pro-container {
     display: flex;
     position: relative;
     text-align: center;
 }
-
-.semantics {
-    display: flex;
-    position: relative;
-    text-align: center;
-}
-
+/* Sets border around project images, and sets width, and height of images inside flex-boxes to 100% */
 .pro-img {
     border: 3px solid var(--sea-green);
     width: 100%;
     height: 100%;
 }
-
+/* When project images are hovered over, makes them less opaque, they become a bit bigger, and reduce border size slightly */
 .pro-img:hover {
     opacity: 0.5;
+    width: 100.5%;
+    height: 100.5%;
+    border: 1.5px solid var(--sea-green);
 }
-
+/* Creates flex-box, sets size of element, centers items horizontally and vertically */
 .links {
     display: flex;
     flex: 10;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    min-width: 80%;
 }
-
+/* Makes the links less opaque when hovered over */
+.link-hover:hover {
+    opacity: 0.5;
+}
+/* Sets even spacing of flex-boxes, increases font-size, aligns text to center, colors text dark grey, and bolds text */
 .contact-me {
     flex: 1;
     font-size: 125%;
     text-align: center;
     color: var(--darker-grey);
+    font-weight: bold;
 }
-
-.link-hover:hover {
-    opacity: 0.5;
-}
-
+/* Sets spacing of flex-box to even, aligns element to right of screen and centers vertically, increases font size, add margin */
 #name {
     display: flex;
     flex: 1;
@@ -129,32 +122,40 @@ li {
     font-size: 200%;
     margin: 10px;
 }
-
+/* Sets image size of self portrait, makes image cover flex-box */
+#port {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+/* Adds margin so when link in header is clicked on, when brought to linked section, appears more towards center of page */
+#about-me {
+    scroll-margin-top: 100px;
+}
+/* Adds margin so when link in header is clicked on, when brought to linked section, appears more towards center of page */
+#work {
+    scroll-margin-top: 80px;
+}
+/* Adds margin above portfolio section */
 #portfolio {
     margin-top: 20px;
 }
-
-#contact {
-    margin-top: 20px;
-    padding-bottom: 10px;
-}
-
+/* Sets size of prework img */
 #prework-img {
     display: flex;
     margin: 10px;
     width: 80%;
 }
-
+/* Sets size of semantics image */
 #semantics-img {
     display: flex;
     margin: 10px;
     width: 50%;
 }
-
-#pro-sem {
-
-}
-
+/* Aligns caption for prework image to bottom left, sets background color to sea green, and makes text color dark grey. 
+Important note: this section and the one below look redundant, but it makes it easier to change values for the items in 
+the media queries, because they become different when the screen gets smaller */
 #pre-cap {
     position: absolute;
     bottom: 25px;
@@ -163,7 +164,9 @@ li {
     color: var(--darker-grey);
     font-size: 125%;
 }
-
+/* Aligns caption for semantics image to bottom left, sets background color to sea green, and makes text color dark grey. 
+Important note: this section looks redundant but it makes it easier to change values for the items in 
+the media queries, because they become different when the screen gets smaller */
 #sem-cap {
     position: absolute;
     bottom: 25px;
@@ -172,15 +175,85 @@ li {
     color: var(--darker-grey);
     font-size: 125%;
 }
-
-@media screen and (max-width: 992px) {
-
+/* Adds margin to top of Contact Me section, and some padding below */
+#contact {
+    margin-top: 20px;
+    padding-bottom: 10px;
 }
-
+/* Sets elements to be displayed more in a column like fashion when the screen size horizontally gets below a certain resolution */
 @media screen and (max-width: 768px) {
+    .info {
+        font-size: 75%;
+    }
 
+    .block {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headings {
+        border-right: none;
+        border-bottom: 5px solid var(--darker-grey);
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .story {
+        margin-left: 20px;
+    }
+
+    .pro-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #name {
+        flex: unset;
+    }
+
+    #semantics-img {
+        width: 60%;
+    }
+
+    .links {
+        flex-flow: column wrap;
+        gap: 15px;
+    }
+
+    #pre-cap {
+        left: 10%;
+        bottom: 10%;
+        font-size: 110%;
+    }
+
+    #sem-cap {
+        left: 20%;
+        bottom: 10%;
+        font-size: 110%;
+    }
 }
-
+/* Makes certain elements smaller to fit in screen, and changes header elements to be displayed in a column */
 @media screen and (max-width: 480px) {
-    
+    li {
+        display: block;
+        margin: 10px;
+    }
+
+    .info {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .personal {
+        display: block;
+    }
+
+    #name {
+        margin: unset;
+        margin-top: 10px;
+    }
 }

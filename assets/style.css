@@ -98,6 +98,10 @@ li {
     height: 100%;
 }
 
+.pro-img:hover {
+    opacity: 0.5;
+}
+
 .links {
     display: flex;
     flex: 10;
@@ -111,6 +115,10 @@ li {
     font-size: 125%;
     text-align: center;
     color: var(--darker-grey);
+}
+
+.link-hover:hover {
+    opacity: 0.5;
 }
 
 #name {
